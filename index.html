@@ -16,26 +16,20 @@
             text-align: center;
             color:rgb(222, 218, 233)
         }
-        .pic {
-            max-height: 600px;
-        }
         .imgdiv {
-            max-width: 450px;
+            max-width: 375px;
             background-color: rgba(52, 44, 61, 0.6);
             text-align: center;
             color:rgb(222, 218, 233);
             border-radius: 15px;
             margin: auto;
-        }
-        .bg {
-            background-color:rgba(206, 194, 240, 0.3);
-            border-radius: 15px;
-        }    
+            height: 100%;
+        }  
         .testbg {
             background-color:rgb(222, 218, 233, 0.4);
         }
         .pet {
-            max-width: 125px;
+            max-width: 100px;
             display: block;
             float: left;
             padding: 6px;
@@ -44,17 +38,62 @@
             background-color:rgba(52, 44, 61, 0.6);
             border-radius: 10px
         }
-        .charainfo {
+        .charaname {
             text-align: left;
+        }
+        .charalevel {
+            text-align: right;
+        }
+        .charastuff {
+            background-color:rgba(206, 194, 240, 0.2);
+            border-radius: 15px;
+            max-width: 343px;
+            max-height: 400px;
+            object-fit: cover;
+            position: relative;
+        }
+        .charabox {
+            min-width: 375px;
+        }
+        .bgsample {
+            background-color:rgba(206, 194, 240, 0.2);
+            border-radius: 15px;
         }
         .display-4 {
             font-size: 35px;
+            margin-top: auto;
+            margin-bottom: auto;
         }
         .petname {
             margin-top: auto;
             margin-bottom: auto;
-            font-size: 20px;
+            font-size: 18px;
             text-align: center;
+        }
+        .sprite {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .pic {
+            border-radius: 15px;
+        }
+        .masterlist{
+            color:rgba(206, 194, 240, 0.5);
+            font-weight: bold;
+        }
+        .carousel {
+            margin: auto;
+            background-color:rgb(222, 218, 233);
+            border-radius: 10px;
+        }
+
+        @media (max-width: 1000px) {
+        .characterstuff { height: 400px;}
         }
     </style>
 </head>
@@ -62,7 +101,7 @@
         <div class="container-fluid page-header justify-content-center">
             <div class="row">
                 <div class ="col-12">
-            <h1 class="display-4 title p-4">HANGING LIGHTS</h1>
+            <h1 class="display-4 title p-4">HL</h1>
             <p></p>
         </div>
     </div>
@@ -73,45 +112,132 @@
             <button class="btn btn-sm btn-outline-secondary my-2 my-lg-0" type="button">Smaller button</button>
         </nav>
 
-        <div class="container-fluid mt-5 character">
+        <div class="container-fluid p-5 character">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-2 testbg">
-                    <p>stuff</p>
+                <div class="col-sm-12 col-md-12 col-lg-2 bgsample"> 
+                    list of character names/thumbnails
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 testbg">
-                    <p>stuff</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 charabox">
-                        <div class="imgdiv p-3 fluid">
-                                <img class="pic bg img-fluid" src = "assets/images/dea.png" src = "assets/images/emptyimage.png">
-                            <div class="row charainfo">
-                                <div class="col-8">
-                                    <h2 class="display-4 mt-4 pl-5">Dea</h2>
-                                </div>
-                                <div class="col-4">
-                                    <h3 class="display-4 pr-4 mt-4">LV 10</h3>
-                                </div>
-                            </div>
+                <div class="col-lg-10 pl-4">
+                    <div class ="row">
+                        <div class="col-1 carousel"> 
+                            carousel left
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-10">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4 charabox">
+                                    <div class="imgdiv pt-3 pl-3 pr-3 fluid">
+                                        <div class ="charastuff img-fluid">
+                                            <img class="pic bg img-fluid" src = "assets/images/flora.png" src = "assets/images/newempty.png">
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-1 sprite ml-4">
+                                                <img src ="assets/images/serpent.png">
+                                            </div>
+                                            <div class="col-5 display-4">
+                                                <h2 class="display-4 pl-5 charaname">Vess</h2>
+                                            </div>
+                                            <div class="col-5 display-4 pr-5 charalevel">
+                                                <h3 class="display-4">LV 10</h3>
+                                            </div>
+                                        </div>
 
-                            <div class="row m-3 mt-4 charapets">
-                                <div class="col-3 charainfo">
-                                    <img class="pet img-fluid" src = "assets/images/skully.png">
-                                </div>
-                                <div class="col-8 petname">
-                                    <h3 class="display-4 petname">DEVI</h3>
-                                </div>
-                            </div>
+                                        <div class="row m-2 mt-4 charapets">
+                                            <div class="col-3 charaname">
+                                                <img class="pet img-fluid" src = "assets/images/skully.png">
+                                            </div>
+                                            <div class="col-8 petname">
+                                                <h3 class="display-4 petname ml-3 ">DEVI</h3>
+                                            </div>
+                                        </div>
 
-                            <div class="row m-3 mt-4 charapets">
-                                <div class="col-3 charainfo">
-                                    <img class="pet img-fluid" src = "assets/images/batsy.png">
+                                        <div class="row m-2 charapets">
+                                            <div class="col-3 charaname">
+                                                <img class="pet img-fluid" src = "assets/images/batsy.png">
+                                            </div>
+                                            <div class="col-8 petname">
+                                                <h3 class="display-4 ml-3 petname">GREAT HORNED GARWYVERN</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-8 petname">
-                                    <h3 class="display-4 petname">GREAT HORNED GARWYVERN</h3>
+                                <div class="col-md-5 col-lg-4 charabox">
+                                    <div class="imgdiv pt-3 pl-3 pr-3 fluid">
+                                        <div class ="charastuff image-fluid">
+                                            <img class="pic bg img-fluid" src = "assets/images/konpeito.png" src = "assets/images/newempty.png">
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-1 sprite ml-4">
+                                                <img src ="assets/images/serpent.png">
+                                            </div>
+                                            <div class="col-5 display-4">
+                                                <h2 class="display-4 pl-5 charaname">Vess</h2>
+                                            </div>
+                                            <div class="col-5 display-4 pr-5 charalevel">
+                                                <h3 class="display-4">LV 10</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row m-2 mt-4 charapets">
+                                            <div class="col-3 charaname">
+                                                <img class="pet img-fluid" src = "assets/images/skully.png">
+                                            </div>
+                                            <div class="col-8 petname">
+                                                <h3 class="display-4 petname ml-3 ">DEVI</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row m-2 charapets">
+                                            <div class="col-3 charaname">
+                                                <img class="pet img-fluid" src = "assets/images/batsy.png">
+                                            </div>
+                                            <div class="col-8 petname">
+                                                <h3 class="display-4 ml-3 petname">GREAT HORNED GARWYVERN</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="col-md-5 col-lg-4 charabox">
+                                    <div class="imgdiv pt-3 pl-3 pr-3 fluid">
+                                        <div class ="charastuff image-fluid">
+                                            <img class="pic bg img-fluid" src = "assets/images/dea.png" src = "assets/images/newempty.png">
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-1 sprite ml-4">
+                                                <img src ="assets/images/serpent.png">
+                                            </div>
+                                            <div class="col-5 display-4">
+                                                <h2 class="display-4 pl-5 charaname">Vess</h2>
+                                            </div>
+                                            <div class="col-5 display-4 pr-5 charalevel">
+                                                <h3 class="display-4">LV 10</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row m-2 mt-4 charapets">
+                                            <div class="col-3 charaname">
+                                                <img class="pet img-fluid" src = "assets/images/skully.png">
+                                            </div>
+                                            <div class="col-8 petname">
+                                                <h3 class="display-4 petname ml-3 ">DEVI</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row m-2 mb-4 charapets">
+                                            <div class="col-3 charaname">
+                                                <img class="pet img-fluid" src = "assets/images/batsy.png">
+                                            </div>
+                                            <div class="col-8 petname">
+                                                <h3 class="display-4 ml-3 petname">GREAT HORNED GARWYVERN</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-1 carousel"> 
+                            carousel right 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
